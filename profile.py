@@ -1,5 +1,6 @@
 import geni.portal as portal
 
+pc = portal.Context()
 request = portal.context.makeRequestRSpec()
 # Here we assign constants that will be used later to describe our machines.
 DEFAULT_NODE_HARDWARE_TYPE = "c6525-25g"
@@ -18,3 +19,5 @@ for node in nodes:
     node.disk_image = DEFAULT_DISK_IMAGE
     s_iface = node.addInterface(DEFAULT_LAN_SOCKET)
     lan.addInterface(s_iface)
+
+pc.printRequestRSpec(request)
