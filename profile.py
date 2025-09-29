@@ -1,4 +1,5 @@
 import geni.portal as portal
+import geni.rspec.pg as pg
 
 pc = portal.Context()
 request = portal.context.makeRequestRSpec()
@@ -18,6 +19,7 @@ nodes = [node_1, node_2]
 for node in nodes:
     node.hardware_type = DEFAULT_NODE_HARDWARE_TYPE
     node.disk_image = DEFAULT_DISK_IMAGE
+    node.addService(pg.Execute(shell="sh", command="/local/repository/init.sh"))
     s_iface = node.addInterface(DEFAULT_LAN_SOCKET)
     lan.addInterface(s_iface)
 
