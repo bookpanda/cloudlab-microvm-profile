@@ -6,7 +6,7 @@ request = portal.context.makeRequestRSpec()
 # Here we assign constants that will be used later to describe our machines.
 DEFAULT_NODE_HARDWARE_TYPE = "c6525-25g"
 DEFAULT_DISK_IMAGE = (
-    "urn:publicid:IDN+utah.cloudlab.us+image+faasnetworkstack-PG0:baseNodeV3"
+    "urn:publicid:IDN+utah.cloudlab.us+image+faasnetworkstack-PG0:baseNodeV4"
 )
 DEFAULT_LAN_SOCKET = "eth1"
 lan = request.LAN()
