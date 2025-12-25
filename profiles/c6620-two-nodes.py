@@ -21,5 +21,6 @@ iface2 = node2.addInterface("eth1")
 link = request.Link("p2p100g")
 link.addInterface(iface1)
 link.addInterface(iface2)
+link.bandwidth = 100000000
 
 pc.printRequestRSpec(request)
