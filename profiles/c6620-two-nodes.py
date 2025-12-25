@@ -14,11 +14,8 @@ for node in [node1, node2]:
     )
 
 # Request the 100G NICs
-iface1 = node1.addInterface("eth100g")
-iface1.component_id = "urn:publicid:IDN+utah.cloudlab.us+interface+eth100g"
-
-iface2 = node2.addInterface("eth100g")
-iface2.component_id = "urn:publicid:IDN+utah.cloudlab.us+interface+eth100g"
+iface1 = node1.addInterface("eth1")
+iface2 = node2.addInterface("eth1")
 
 # Explicitly connect them
 link = request.Link("p2p100g")
